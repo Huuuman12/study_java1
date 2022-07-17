@@ -2,3 +2,21 @@ git status					// 수정된 파일 확인
 git add [file] 				// 수정된 파일 추가
 git commit -m "[message]"	// 파일 커밋 준비
 git push					// 깃 푸쉬
+
+error의 경우 
+1. error: failed to push some refs to ~
+
+// github에 내 컴퓨터에는 없는 파일이 있을 때
+// 내 파일을 push하면 생기는 오류
+
+// 해결방법: 먼저 github에 있는 파일을 pull 한 후
+// add commit push흘 하여 수정사항 반영하면 된다.
+
+2. error: push.default is unset
+// git push 명령의 옵션을 확인해 달라는 의미.
+// git push 명령에는 2가지 옵션이 있다.
+// simple : 현재 작업중인 브랜치만 push
+// matching : local과 remote 브랜치명이 동일한 모든 브랜치를 push
+
+// 해결방법: git config --global push.default [simple or matching]
+
